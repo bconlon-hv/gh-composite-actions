@@ -298,12 +298,13 @@ runs:
       if:  ${{ env.run_plugin_integration_tests}}
       shell: bash
       run: |
-#        TODO read the file from the repo (or does its contents need to be passed in?)
-        for (each_line in that_file_we_all_like_so_much) {
-           if (the first bit of data in the line is the name of a plugin that's also in the list of changed components) {
-                 run "mvn verify -Dpdi-plugin-test -amd -B <list of properties from the file, ex "elasticversion=7">
-             }
-        }
+        echo "testing"
+##        TODO read the file from the repo (or does its contents need to be passed in?)
+#        for (each_line in that_file_we_all_like_so_much) {
+#           if (the first bit of data in the line is the name of a plugin that's also in the list of changed components) {
+#                 run "mvn verify -Dpdi-plugin-test -amd -B <list of properties from the file, ex "elasticversion=7">
+#             }
+#        }
 #    TODO how to handle getting the output for each individual pass?
 #      TODO also, maybe add an action in here at somepoint to call firecracker
            
